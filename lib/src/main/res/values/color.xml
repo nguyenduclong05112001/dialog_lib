@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background_dialog">#2C2C2E</color>
+    <color name="icon_dialog">#FFFFFF</color>
+    <color name="title_dialog">#FFFFFF</color>
+    <color name="description_dialog">#414141</color>
+    <color name="textButton_dialog">#FFFFFF</color>
+    <color name="backgroundButton_dialog">#B71564</color>
+    <color name="borderButton_dialog">#414141</color>
+</resources>
