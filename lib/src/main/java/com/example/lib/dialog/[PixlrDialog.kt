@@ -54,48 +54,55 @@ class PixlrDialog(
         this.window?.attributes = windowAttribute
     }
 
-    fun createDialog() {
+    fun createDialog():PixlrDialog {
         this.create()
+        return this
     }
 
-    fun setTitle(title: String) {
+    fun setTitle(title: String): PixlrDialog {
         this.textTitle.text = title
+        return this
     }
 
-    fun setDescription(description: String) {
+    fun setDescription(description: String) : PixlrDialog{
         this.description.text = description
+        return this
     }
 
-    fun setIconTitle(icon: Drawable) {
-        iconTitle.setImageDrawable(icon)
+    fun setIconTitle(icon: Int): PixlrDialog {
+        iconTitle.setImageResource(icon)
         isAddIconTitle = true
+        return this
     }
 
-    fun setGravityDialog(gravity: Int) {
+    fun setGravityDialog(gravity: Int) : PixlrDialog{
         val windowAttribute = window?.attributes
         windowAttribute?.gravity = gravity
         window?.attributes = windowAttribute
+        return this
     }
 
-    fun setButtonNegative(
+    fun setButtonNegative (
         contentText: String,
         onClickButtonNegative: OnClickButtonNegative
-    ) {
+    ) : PixlrDialog{
         isAddButtonNegative = true
         this.onClickButtonNegative = onClickButtonNegative
         this.buttonNegative.text = contentText
+        return this
     }
 
     fun setButtonPositive(
         contentText: String,
         onClickButtonPositive: OnClickButtonPositive
-    ) {
+    ) : PixlrDialog{
         isAddButtonPositive = true
         this.onClickButtonPositive = onClickButtonPositive
         this.buttonPossible.text = contentText
+        return this
     }
 
-    fun build() {
+    fun build() : PixlrDialog{
         when (isAddIconTitle) {
             true -> {
                 this.iconTitle.visibility = View.VISIBLE
@@ -129,6 +136,7 @@ class PixlrDialog(
             }
         }
         this.show()
+        return this
     }
 
     override fun onClick(btnView: View) {
